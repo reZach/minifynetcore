@@ -1,0 +1,16 @@
+{
+  "author": "",
+  "description": "",
+  "dependencies": {
+    "gulp": "4.0.0",
+    "gulp-cshtml-minify": "1.0.4",
+    "gulp-rename": "1.4.0"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "name": "minifynetcore",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
