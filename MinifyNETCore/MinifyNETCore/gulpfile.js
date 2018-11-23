@@ -3,7 +3,7 @@ var rename = require('gulp-rename');
 var minifyCshtml = require('gulp-cshtml-minify');
 
 gulp.task('minify', function (done) {
-    gulp.src("Views/**")        
+    gulp.src("Views/**/*.cshtml")        
         .pipe(rename({ suffix: ".min" }))
         .pipe(minifyCshtml())
         .pipe(gulp.dest("Views"));
