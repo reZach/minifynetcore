@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MinifyNETCore.Controllers
 {
+    /// <summary>
+    ///     Is the base class that allows our controllers to load
+    ///     minified files based on the ASPNETCORE_ENVIRONMENT
+    /// </summary>
     public abstract class BaseController : Controller
     {
         public override ViewResult View(string viewName, object model)
@@ -15,6 +16,9 @@ namespace MinifyNETCore.Controllers
             {
                 string action = ControllerContext.RouteData.Values["action"].ToString();
 
+                // This logic handles if we pass in a 
+                // view name or no name when rendering
+                // views in our controllers
                 if (string.IsNullOrEmpty(viewName))
                 {
                     viewName = $"{action}.min";

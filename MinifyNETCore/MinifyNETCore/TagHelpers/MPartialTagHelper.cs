@@ -4,12 +4,15 @@ using Microsoft.AspNetCore.Mvc.ViewEngines;
 using Microsoft.AspNetCore.Mvc.ViewFeatures.Internal;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace MinifyNETCore.TagHelpers
 {
+    /// <summary>
+    ///     The minified-partial tag helper that loads
+    ///     minified partials depending on the value
+    ///     of ASPNETCORE_ENVIRONMENT
+    /// </summary>
     public class MPartialTagHelper : PartialTagHelper
     {
         public MPartialTagHelper(ICompositeViewEngine viewEngine, IViewBufferScope viewBufferScope)

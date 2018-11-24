@@ -2,6 +2,7 @@
   "author": "",
   "description": "",
   "dependencies": {
+    "del": "3.0.0",
     "gulp": "4.0.0",
     "gulp-cshtml-minify": "1.0.4",
     "gulp-rename": "1.4.0"
